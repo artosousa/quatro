@@ -1,0 +1,39 @@
+.marker{
+  position: relative;
+  color:#8c65f1;
+   width: 48px;
+   height: 24px;
+   background-color: white;
+   border-radius: 5px;
+   padding: 5px;
+   text-align: center;
+   font-size: 18px;
+   font-weight: bolder;
+   z-index: 1;
+
+   box-shadow: 2px 2px 6px #999;
+}
+.marker::after{
+  content:'';
+  left:24px;
+  top: 34px;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: solid 5px #fff;
+  border-left: solid 5px transparent;
+  border-right: solid 5px transparent;
+}
+
+.marker.selected{
+  background-color: #8c65f1;
+  color: #fff;
+
+  z-index: 3;
+}
+
+.marker.selected::after{
+  border-top: solid 5px #8c65f1;
+  border-left: solid 5px transparent;
+  border-right: solid 5px transparent;
+}
